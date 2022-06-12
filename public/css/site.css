@@ -376,32 +376,32 @@ footer input:focus {
 }
 
 .vision-cart.cart-1 {
-    background-image: url(../images/vision-1.jpg);
+    background-image: url(../img/vision-1.jpg);
     object-fit: cover
 }
 
 .vision-cart.cart-2 {
-    background-image: url(../images/vision-2.jpg);
+    background-image: url(../img/vision-2.jpg);
     object-fit: cover
 }
 
 .vision-cart.cart-3 {
-    background-image: url(../images/vision-3.jpg);
+    background-image: url(../img/vision-3.jpg);
     object-fit: cover
 }
 
 .vision-cart.cart-4 {
-    background-image: url(../images/vision-4.jpg);
+    background-image: url(../img/vision-4.jpg);
     object-fit: cover
 }
 
 .vision-cart.cart-5 {
-    background-image: url(../images/vision-5.jpg);
+    background-image: url(../img/vision-5.jpg);
     object-fit: cover
 }
 
 .vision-cart.cart-6 {
-    background-image: url(../images/vision-6.jpg);
+    background-image: url(../img/vision-6.jpg);
     object-fit: cover
 }
 /* rtl:end:ignore */

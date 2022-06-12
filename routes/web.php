@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/languages', function () {
+    return view('languages');
+});
+
+Route::get('/tchat', function () {
+    return view('tchat');
+});
+
+Route::get('/signup', function () {
+    return view('signup');
+});
