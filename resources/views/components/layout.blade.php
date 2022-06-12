@@ -37,7 +37,7 @@
                                             DJED
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="signup">S'inscrire</a></li>
+                                            <li><a class="dropdown-item" href="/signup">S'inscrire</a></li>
                                             <li><hr class="dropdown-divider"></li>
                                             <li><a class="dropdown-item" href="/abonnement">Gerer vos abonnement</a></li>
                                             <li><hr class="dropdown-divider"></li>

@@ -32,3 +32,11 @@ Route::get('/tchat', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+
+Route::get('/abonnement', function () {
+    return view('abonnement');
+});
+
+Route::get('/payments', function () {
+    return view('payments');
+});
