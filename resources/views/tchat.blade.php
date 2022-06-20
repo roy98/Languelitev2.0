@@ -16,26 +16,17 @@
                 <h3 class="fw-light">Comments</h3>
                 <div class="row">
                     <div class="col-sm-5 col-md-6 col-12 pb-4">
-                        <div class="comment mt-4 text-justify float-left">
-                            <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                        </div>
-                        <div class="text-justify comment mt-4 float-right">
-                            <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                        </div>
-                        <div class="comment mt-4 text-justify">
-                            <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Jhon Doe</h4> <span>- 20 October, 2018</span> <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                        </div>
-                        <div class="comment mt-4 text-justify">
-                            <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Rob Simpson</h4> <span>- 20 October, 2018</span> <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                        </div>
+                        @if (isset($comments))
+                            @foreach ($comments as $comment)
+                                <div class="text-justify comment mt-4 float-right">
+                                    <img src="https://i.imgur.com/CFpa3nK.jpg" alt="" class="rounded-circle" width="40" height="40">
+                                    <h4>{{ $comment['nom'] }}</h4> <span>- {{ $comment['date'] }}</span> <br>
+                                    <p>{{ $comment['contenu'] }}</p>
+                                </div>
+                            @endforeach
+                        @else
+                            <p>No Comments</p>
+                        @endif
                     </div>
                     <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
                         <form id="align-form">
