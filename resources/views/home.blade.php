@@ -303,16 +303,29 @@
             <div class="card px-5 py-2" style="width: 40rem;">
                 <div class="card-body">
                     <h6 class="card-title display-6 fw-light">Contact Us</h6>
-                    <form action="">
+                    <form action="{{url('/')}}" method="POST">
+                        @csrf
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Email">
+                            @error('email')
+                                <div style="display: inline-block!important" class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" id="textArea" placeholder="Type something" rows="5"></textarea>
+                            <textarea class="form-control" id="message" name="message" placeholder="Type something" rows="5">{{ old('message') }}</textarea>
+                            @error('message')
+                                <div style="display: inline-block!important" class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-md px-5 btn-primary fw-light">Send</button>
                     </form>
                 </div>
+                @if (isset($message_sent) && $message_sent)
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Houra!</strong> Your message has been send successfully.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
             </div>
         </div>
     </div>
